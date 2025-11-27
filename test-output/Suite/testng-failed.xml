@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="utilities.ExtentTestListener"/>
+  </listeners>
+  <test thread-count="5" name="ZasaProject(failed)">
+    <classes>
+      <class name="testCases.EditColorSettingsTest">
+        <methods>
+          <include name="openProductSettings"/>
+          <include name="adminLogin"/>
+          <include name="dropdown"/>
+          <include name="setup"/>
+          <include name="editColor"/>
+        </methods>
+      </class> <!-- testCases.EditColorSettingsTest -->
+    </classes>
+  </test> <!-- ZasaProject(failed) -->
+</suite> <!-- Failed suite [Suite] -->

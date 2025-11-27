@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ProductSettingsModule">
+<listeners>
+<listener class-name="utilities.ExtentTestListener"></listener>
+</listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="tests.pm.productsettings.ColorSettingsTest"/>
+      <class name="tests.pm.productsettings.SizeSettingsTest"/>
+      <class name="tests.pm.productsettings.TypeSettingsTest"/>
+      <class name="tests.pm.productsettings.BrandSettingsTest"/>
+       <class name="tests.pm.productsettings.StockCategoryTest"/>
+       <class name="tests.pm.productsettings.PublisherSettingsTest"/>
+      <class name="tests.pm.productsettings.EditionSettingsTest"/>
+     
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- ProductSettings -->
