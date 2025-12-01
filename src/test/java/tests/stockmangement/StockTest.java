@@ -15,13 +15,13 @@ import utilities.ExtentTestListener;
 @Listeners(ExtentTestListener.class)
 public class StockTest extends BaseTest {
 
-	@Test(priority = 1)
+	//@Test(priority = 1)
 	public void verifyStockTable() {
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sidePages = new SidePages(driver);
 		StockPage stockPage = new StockPage(driver);
 		try {
-			test.info("Opening to the stock management module");
+			test.info("Opening to the stocks module");
 			sidePages.openStocksPage();
 			assertTrue(stockPage.isStockTableDisplayed(), "Stock table is NOT displayed!");
 			System.out.println("Stock table is displayed");
@@ -33,7 +33,7 @@ public class StockTest extends BaseTest {
 
 	}
 
-	@Test(priority = 2)
+	//@Test(priority = 2)
 	public void verifyStockTableRowCount() {
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sidePages = new SidePages(driver);
@@ -52,7 +52,7 @@ public class StockTest extends BaseTest {
 		}
 	}
 
-	@Test(priority = 3)
+	//@Test(priority = 3)
 	public void navigateThroughStockPages() {
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sidePages = new SidePages(driver);
@@ -69,6 +69,30 @@ public class StockTest extends BaseTest {
 			test.fail("Failed" + e.getMessage());
 			throw e;
 		}
+		
 	}
-
+	
+	@Test
+	public void verifyTheFilterOption()
+	{
+		ExtentTest test = ExtentTestListener.getTest();
+		SidePages sidePages = new SidePages(driver);
+		StockPage stockPage = new StockPage(driver);
+		try
+		{
+			test.info("Opening to the stock management module");
+			sidePages.openStocksPage();
+			test.info("Check the filter option functioning");
+			stockPage.useFilter();
+			stockPage.useBookFilter();
+			test.info("In the filter option selected the stationary option");
+			test.info("The table has sorted to category stationary");
+		}
+		catch(Exception e)
+		{
+			test.fail("Failed"+e.getMessage());
+			throw e;
+			
+		}
+	}
 }

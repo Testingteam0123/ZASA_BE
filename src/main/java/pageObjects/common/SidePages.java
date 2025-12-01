@@ -49,6 +49,9 @@ public class SidePages extends BasePage {
 	@FindBy(xpath = "(//*[text()='Stocks'])[1]")
 	WebElement btnStocks;
 	
+	@FindBy(xpath="//*[text()='Mark Dead Stock']")
+	WebElement btnMarkDeadStock;
+	
 	public void openProductSettingspage() {
 		btnProductManagement.click();
 		brnProductSettings.click();
@@ -88,4 +91,13 @@ public class SidePages extends BasePage {
 		btnStockManagement.click();
 		btnStocks.click();
 	}
+	
+	public void openMarkDeadStock()
+	{
+		btnStockManagement.click();
+		btnMarkDeadStock.click();
+	}
+	
+	
 }
+

@@ -7,8 +7,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import pageObjects.base.BasePage;
+import utilities.WaitHelper;
 
 public class StockPage extends BasePage {
+	
+	WaitHelper wait= new WaitHelper(driver);
 
 	public StockPage(WebDriver driver) {
 		super(driver);
@@ -24,6 +27,12 @@ public class StockPage extends BasePage {
 	@FindBy(xpath = "//span[text()='Next']")
 	WebElement nextButton;
 	
+	@FindBy(xpath="//span[text()='Filter']")
+	WebElement filterOption;
+	
+	@FindBy(xpath="(//input[@class='accent-[#966AC3]'])[3]")
+	WebElement bookFilter;
+	
 	
 	public boolean isStockTableDisplayed() {
 		return stockTable.isDisplayed();
@@ -35,6 +44,17 @@ public class StockPage extends BasePage {
 	
 	public void clickNextButton() {
 		nextButton.click();
+	}
+	
+	public void useFilter()
+	{
+		filterOption.click();
+	}
+	
+	public void useBookFilter()
+	{
+		wait.visibilityOf(bookFilter, 5);
+		bookFilter.click();
 	}
 
 }

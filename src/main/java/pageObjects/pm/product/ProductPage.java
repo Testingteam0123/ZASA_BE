@@ -148,6 +148,18 @@ public class ProductPage extends BasePage {
 
 	@FindBy(xpath = "//option[text()='Note Book']")
 	WebElement selectBookCategory;
+	
+	@FindBy(xpath="(//button[contains(@class,'peer')])[2]")
+	WebElement selectCheckBox;
+	
+	@FindBy(xpath="//button/span[text()='Bulk Action']")
+	WebElement btnBulkAction;
+	
+	@FindBy(xpath="//button[text()='Exchange/Return']")
+	WebElement selectOption;
+	
+	@FindBy(xpath="//li[contains(@class,'group toast')]//div//div[text()='Policy updated successfully.']")
+	WebElement policyUpdateMessage;
 
 	// add stationary
 	public void addStationaryProduct(String name, String price) {
@@ -266,6 +278,20 @@ public class ProductPage extends BasePage {
 
 		}
 
+	}
+	
+	public void policyUpdate()
+	{
+		selectCheckBox.click();
+		btnBulkAction.click();
+		selectOption.click();
+	}
+	
+	public String getPolicyUpdateMessage()
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		WebElement msg = wait.until(ExpectedConditions.visibilityOf(policyUpdateMessage));
+		return msg.getText();
 	}
 
 }

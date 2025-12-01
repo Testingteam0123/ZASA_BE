@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.QP.quotationmanagement.QuotationMangementTest">
+      <class name="tests.pm.product.ProductsTest">
         <methods>
-          <include name="approveQuotation"/>
+          <include name="checkThePolicyUpdateFunction"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- tests.QP.quotationmanagement.QuotationMangementTest -->
+      </class> <!-- tests.pm.product.ProductsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

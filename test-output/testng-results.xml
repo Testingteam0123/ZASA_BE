@@ -1,29 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-27T15:57:48 IST" name="Default suite" finished-at="2025-11-27T15:57:53 IST" duration-ms="4771">
+  <suite started-at="2025-12-01T15:19:57 IST" name="Default suite" finished-at="2025-12-01T15:20:02 IST" duration-ms="4530">
     <groups>
     </groups>
-    <test started-at="2025-11-27T15:57:48 IST" name="Default test" finished-at="2025-11-27T15:57:53 IST" duration-ms="4771">
-      <class name="tests.stockmangement.StockTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.stockmangement.StockTest@1623b78d]" started-at="2025-11-27T15:57:48 IST" name="setup" finished-at="2025-11-27T15:57:51 IST" duration-ms="2860" status="PASS">
+    <test started-at="2025-12-01T15:19:57 IST" name="Default test" finished-at="2025-12-01T15:20:02 IST" duration-ms="4530">
+      <class name="tests.pm.product.ProductsTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.pm.product.ProductsTest@6adbc9d]" started-at="2025-12-01T15:19:58 IST" name="setup" finished-at="2025-12-01T15:20:00 IST" duration-ms="2556" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyStockTable()[pri:1, instance:tests.stockmangement.StockTest@1623b78d]" started-at="2025-11-27T15:57:51 IST" name="verifyStockTable" finished-at="2025-11-27T15:57:52 IST" duration-ms="888" status="PASS">
+        <test-method signature="checkThePolicyUpdateFunction()[pri:0, instance:tests.pm.product.ProductsTest@6adbc9d]" started-at="2025-12-01T15:20:00 IST" name="checkThePolicyUpdateFunction" finished-at="2025-12-01T15:20:02 IST" duration-ms="1658" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyStockTable -->
-        <test-method signature="verifyStockTableRowCount()[pri:2, instance:tests.stockmangement.StockTest@1623b78d]" started-at="2025-11-27T15:57:52 IST" name="verifyStockTableRowCount" finished-at="2025-11-27T15:57:52 IST" duration-ms="526" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyStockTableRowCount -->
-        <test-method signature="navigateThroughStockPages()[pri:3, instance:tests.stockmangement.StockTest@1623b78d]" started-at="2025-11-27T15:57:52 IST" name="navigateThroughStockPages" finished-at="2025-11-27T15:57:53 IST" duration-ms="215" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateThroughStockPages -->
-      </class> <!-- tests.stockmangement.StockTest -->
+        </test-method> <!-- checkThePolicyUpdateFunction -->
+      </class> <!-- tests.pm.product.ProductsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
